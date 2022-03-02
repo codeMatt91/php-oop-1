@@ -3,13 +3,17 @@
 require 'class/Movie.php';
 require 'data/data.php';
 
-$movie_first = new Movie('Shining', 'Horror', 'Stanley Kubrick', $plot1);
+$movie_first = new Movie('Shining', 'Horror', 'Stanley Kubrick', $plot1, $discount = 'less');
 $movie_second = new Movie('Shutter Island', 'Thriller', 'Martin Scorsese', $plot2);
-$movie_third = new Movie('Lord of the rings', 'Fantasy', 'Peter Jackson', $plot1);
+$movie_third = new Movie('Lord of the rings', 'Fantasy', 'Peter Jackson', $plot1, $discount = 'less');
 
 var_dump($movie_first);
 var_dump($movie_second);
 var_dump($movie_third);
+
+$movie_first->setPrice('less');
+$movie_second->setPrice('full');
+$movie_third->setPrice('less');
 
 ?>
 
@@ -31,6 +35,7 @@ var_dump($movie_third);
          <h3>Genere : <?php echo $movie_first->genre ?></h3>
          <h4>Plot : </h4>
          <div><?php echo $movie_first->plot ?></div>
+         <div><?php echo $movie_first->getPrice() ?></div>
       </div>
       <div class="my-4">
          <h1> Titolo : <?php echo $movie_second->title ?></h1>
@@ -38,6 +43,7 @@ var_dump($movie_third);
          <h3>Genere : <?php echo $movie_second->genre ?></h3>
          <h4>Plot : </h4>
          <div><?php echo $movie_second->plot ?></div>
+         <div><?php echo $movie_second->getPrice() ?></div>
       </div>
       <div class="my-4">
          <h1> Titolo : <?php echo $movie_third->title ?></h1>
@@ -45,6 +51,7 @@ var_dump($movie_third);
          <h3>Genere : <?php echo $movie_third->genre ?></h3>
          <h4>Plot : </h4>
          <div><?php echo $movie_third->plot ?></div>
+         <div><?php echo $movie_third->getPrice() ?></div>
       </div>
    </div>
 </body>
