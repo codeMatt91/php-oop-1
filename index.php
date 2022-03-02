@@ -24,7 +24,14 @@ var_dump($movie_third);
 </head>
 
 <body>
-
+   <div class="container">
+      <div>
+         <h1> Titolo : <?php echo $movie_first->title ?></h1>
+         <h3>Regista : <?php echo $movie_first->director ?></h3>
+         <h3>Genere : <?php echo $movie_first->genre ?></h3>
+         <h4>Plot : <?php echo $movie_first->plot ?></h4>
+      </div>
+   </div>
 </body>
 
 </html>

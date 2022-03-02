@@ -15,5 +15,9 @@ class Movie
       $this->plot= $plot;
 
    }
+
+   public function printedElement($element){
+      return $element;
+   }
 }
 
