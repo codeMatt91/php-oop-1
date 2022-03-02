@@ -25,11 +25,26 @@ var_dump($movie_third);
 
 <body>
    <div class="container">
-      <div>
+      <div class="my-4">
          <h1> Titolo : <?php echo $movie_first->title ?></h1>
          <h3>Regista : <?php echo $movie_first->director ?></h3>
          <h3>Genere : <?php echo $movie_first->genre ?></h3>
-         <h4>Plot : <?php echo $movie_first->plot ?></h4>
+         <h4>Plot : </h4>
+         <div><?php echo $movie_first->plot ?></div>
+      </div>
+      <div class="my-4">
+         <h1> Titolo : <?php echo $movie_second->title ?></h1>
+         <h3>Regista : <?php echo $movie_second->director ?></h3>
+         <h3>Genere : <?php echo $movie_second->genre ?></h3>
+         <h4>Plot : </h4>
+         <div><?php echo $movie_second->plot ?></div>
+      </div>
+      <div class="my-4">
+         <h1> Titolo : <?php echo $movie_third->title ?></h1>
+         <h3>Regista : <?php echo $movie_third->director ?></h3>
+         <h3>Genere : <?php echo $movie_third->genre ?></h3>
+         <h4>Plot : </h4>
+         <div><?php echo $movie_third->plot ?></div>
       </div>
    </div>
 </body>
